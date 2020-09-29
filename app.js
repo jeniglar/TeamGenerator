@@ -12,10 +12,97 @@ const render = require("./lib/htmlRenderer");
 
 // Write code to use inquirer to gather information about the development team members,
 // and to create objects for each team member (using the correct classes as blueprints!)
+const employees = [];
+
+const employeeQuestion = [
+    {
+        type: "list",
+        name: "role",
+        message: "Please select the employee's role:",
+        choices: [
+            "Manager",
+            "Engineer",
+            "Intern",
+            "Exit"
+        ]
+    }
+];
+
+const managerQuestions = [
+    {
+        type: "input",
+        name: "office",
+        message: "Please enter the manager's office number"
+    },
+    {
+        type: "input",
+        name: "name",
+        message: "Please enter the employee's name"
+    },
+    {
+        type: "input",
+        name: "id",
+        message: "Please enter the employee's ID number"
+    },
+    {
+        type: "input",
+        name: "email",
+        message: "Please enter the employee's email address"
+    }
+];
+
+const engineerQuestions = [
+    {
+        type: "input",
+        name: "GitHub",
+        message: "Please enter the engineer's GitHub user name"
+    },
+    {
+        type: "input",
+        name: "name",
+        message: "Please enter the employee's name"
+    },
+    {
+        type: "input",
+        name: "id",
+        message: "Please enter the employee's ID number"
+    },
+    {
+        type: "input",
+        name: "email",
+        message: "Please enter the employee's email address"
+    }
+];
+
+const internQuestions = [
+    {
+        type: "input",
+        name: "school",
+        message: "Please enter the intern's school"
+    },
+    {
+        type: "input",
+        name: "name",
+        message: "Please enter the employee's name"
+    },
+    {
+        type: "input",
+        name: "id",
+        message: "Please enter the employee's ID number"
+    },
+    {
+        type: "input",
+        name: "email",
+        message: "Please enter the employee's email address"
+    }
+];
+
 
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
+
+
 
 // After you have your html, you're now ready to create an HTML file using the HTML
 // returned from the `render` function. Now write it to a file named `team.html` in the

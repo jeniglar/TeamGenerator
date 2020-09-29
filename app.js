@@ -102,7 +102,39 @@ const internQuestions = [
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
 
+function init() {
+    inquirer.prompt(employeeQuestion).then(function (position) {
+        console.log(position.role);
+        if(position.role === "Manager") {
+            inquirer.prompt(managerQuestions).then(function (answer) {
+                console.log(answer);
+                const manager = new Manager(answer.name, answer.id, answer.email, answer.office);
+                employees.push(manager);
+                init();
+            });
+        } else if (position.role === "Engineer") {
+           inquirer.prompt(engineerQuestions).then(function (answer) {
+                console.log(answer);
+                const engineer = new Engineer(answer.name, answer.id, answer.email, answer.GitHub);
+                employees.push(engineer);
+                init();
+            });
+        } else if (position.role === "Intern") {
+            inquirer.prompt(internQuestions).then(function (answer) {
+                console.log(answer);
+                const intern = new Intern(answer.name, answer.id, answer.email, answer.school);
+                employees.push(intern);
+                init();
+            });
+        } else if (position.role === "Exit") {
+            console.log(employees);
+            fs.writeFileSync(outputPath, render(employees), "utf-8"); 
+        }
+    })
+};
 
+
+init();
 
 // After you have your html, you're now ready to create an HTML file using the HTML
 // returned from the `render` function. Now write it to a file named `team.html` in the

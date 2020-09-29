@@ -4,8 +4,10 @@
 ## Description 
 I have created an Node CLI that takes in employee information and generates a Team Profile webpage that displays a summary for each employee. This application can be used by a manager to create an easy to read team snapshot with essential employee information such as role, ID, email, etc. 
 
+Video Demonstration: https://drive.google.com/file/d/1xcmFO2T-9M_f16minyJROIICWchpUMo9/view?usp=sharing
+
 <p align="center">
-<img width ="70%" src="screenshot.png" alt="Team Profile page">
+<img width ="80%" src="screenshot.png" alt="Team Profile page">
 </>
 
 

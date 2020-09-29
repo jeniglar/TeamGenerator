@@ -4,6 +4,10 @@
 ## Description 
 I have created an Node CLI that takes in employee information and generates a Team Profile webpage that displays a summary for each employee. This application can be used by a manager to create an easy to read team snapshot with essential employee information such as role, ID, email, etc. 
 
+<p align="center">
+<img width ="70%" src="screenshot.png" alt="Team Profile page">
+</>
+
 
 ## Table of Contents
 - [Installation](#installation)
@@ -19,7 +23,7 @@ The user will need to have NPM installed prior to running this application.
 
 
 ## Usage
-The user will run this application using node in their terminal. They will be prompted to provide information on each employee's name, ID, email address, and additional role specific information.The user can enter as many employees as they like. 
+The user will run this application using node in their terminal. They will be prompted to provide information on each employee's name, ID, email address, and additional role specific information. The user can enter as many employees as they like. 
 
 
 ## License
